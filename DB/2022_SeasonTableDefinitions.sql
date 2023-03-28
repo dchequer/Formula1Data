@@ -46,7 +46,8 @@ create table if not exists Drivers(
 );
 
 create table if not exists DOTD(
-	circuit_id int,
+	race_id int,
+    circuit_id int,
     grand_prix_name varchar(100),
 	circuit_name varchar(100),
     first_place_driver_id int,
@@ -59,7 +60,7 @@ create table if not exists DOTD(
     third_place_driver_name varchar(50),
     third_place_vote float,
 	
-    primary key (circuit_id),
+    primary key (race_id),
     foreign key (circuit_id) references Circuits(circuit_id),
     foreign key (grand_prix_name) references Circuits(grand_prix_name),
     foreign key (circuit_name) references Circuits(circuit_name),
