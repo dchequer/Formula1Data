@@ -1,3 +1,4 @@
 use formulaone;
 
-select * from drivers;
+select * from calendar;
+drop table if exists calendar;
